@@ -1,0 +1,19 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: deploiment-devops-projet
+spec:
+  replicas: 1
+  selector:
+    matchLabels:
+      app: deploiment-devops-projet
+  template:
+    metadata:
+      labels:
+        app: deploiment-devops-projet
+    spec:
+      containers:
+      - name: devops-projet-fall-2023
+        image: ryanbag/devops-projet-fall-2023:latest
+        ports:
+        - containerPort: 3000
