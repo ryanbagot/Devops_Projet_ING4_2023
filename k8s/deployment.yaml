@@ -17,3 +17,17 @@ spec:
         image: ryanbag/devops-projet-fall-2023:latest
         ports:
         - containerPort: 3000
+        volumeMounts:
+        - mountPath: "/data"
+          name: storage
+        resources:
+          limits:
+            cpu: "0.5"
+            memory: "512Mi"
+          requests:
+            cpu: "0.1"
+            memory: "256Mi"
+      volumes:
+      - name: storage
+        persistentVolumeClaim:
+          claimName: persistent-volume-claim
