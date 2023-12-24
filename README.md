@@ -18,28 +18,33 @@ https://github.com/ryanbagot/Lab_gr5_Devops
 
 ## Instruction
 - Pour installation, dans un premier temps il est nécessaire de faire cette commande :
-'''
+```
 git clone https://github.com/ryanbagot/Devops_Projet_2023.git
-'''
+```
+
 - Par la suite, il faut installer les dépendances du projet, grâce à cette commande :
-'''
+```
 npm install
-'''
+```
+
 - Pour exécuter cette application dans un conteneur Docker, suivez les étapes ci-dessous :
-'''
+```
 docker pull ryanbag/devops-projet-fall-2023:latest
-'''
-'''
+```
+
+```
 docker run -d -p 8080:80 --name nom-conteneur ryanbag/devops-projet-fall-2023:latest
-'''
+```
+
 - Pour déployer cette application sur un cluster Docker Compose, vous devrez effectuer cette commande:
-'''
+```
 docker-compose up -d
-'''
+```
+
 - Pour déployer cette application sur un cluster Kubernetes (K8s):
-'''
+```
 kubectl apply -f k8s/
-'''
+```
 
 ## Liens nécessaire: 
 - Application web : https://portal.azure.com/#@poce.onmicrosoft.com/resource/subscriptions/89de088a-3931-45a0-82a0-b8a6cae9efa3/resourceGroups/Devops_gr_5/providers/Microsoft.Web/sites/Projet-Devops-Fall-2023/appServices
