@@ -1,4 +1,4 @@
-version: '3.8'
+version: "3.8"
 
 services:
   app:
@@ -11,10 +11,10 @@ services:
       - db
       - redis
     volumes:
-      - .:/app 
+      - .:/app
 
   db:
-    image: postgres:latest 
+    image: postgres:latest
     environment:
       POSTGRES_DB: exampledb
       POSTGRES_USER: exampleuser
